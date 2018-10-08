@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <title>palindromizer</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <a class="navbar-brand text-white">palindromizer</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto"></ul>
+        <span class="navbar-text">
+          <a class="nav-link" href="https://github.com/scarvalhojr/palindromizer" target="_blank">source on GitHub</a>
+        </span>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <form name="palindromizer">
+        <div class="form-row my-3">
+          <div class="col">
+            <input type="text" class="form-control form-control-lg shadow text-right" id="left_half" placeholder="Start typing here..." oninput="checkInput()">
+          </div>
+          <div style="flex: 0 0 60px">
+            <input type="text" class="form-control form-control-lg shadow text-center" id="mid_letter" maxlength="1" oninput="checkInput()">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control form-control-lg shadow text-left" id="right_half" oninput="checkInput()">
+          </div>
+        </div>
+        <div class="form-row my-3">
+          <div class="col text-right">
+            <button type="button" class="btn btn-primary shadow btn-lg" onclick="copyToRight()">&#9658;</button>
+          </div>
+          <div style="flex: 0 0 60px"></div>
+          <div class="col text-left">
+            <button type="button" class="btn btn-primary shadow btn-lg" onclick="copyToLeft()">&#9668;</button>
+          </div>
+        </div>
+        <div class="form-group my-3">
+          <input type="text" class="form-control form-control-lg shadow text-center" id="palindrome" readonly>
+        </div>
+      </form>
+    </div>
+
+    <script src="palindromizer.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
